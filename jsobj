@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    
+    <meta charset="utf-8">
+
+  <base href="https://editor.p5js.org/Robledo-Jacob/present/HTbc5j-MN/"><style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+</style>
+
+</head>
+    
+  
+  
+
+
+
+    <body>
+       
+
+    
+    <script type="text/javascript">
+
+var spot= {
+x:100,
+y:50, 
+};
+
+
+var col ={
+r:200,
+g:0,
+b:0,
+}
+
+
+
+function setup() {
+  createCanvas(600, 400);
+	background(0);
+
+
+}
+
+function draw() {
+  noStroke()
+  col.r=random(10,50);
+  col.g=random(100,50);
+  col.b=random(10,300);
+ 	spot.x=random(0,width);
+  spot.y=random(0,height);
+  fill(col.r, col.g ,col.b, 100);
+  ellipse(spot.x,spot.y, 24, 24);
+  ellipse(mouseX,mouseY, 100,50);
+  
+}
+function mousePressed(){
+background(0);
+
+}
+    </script>
+
+
+
+
+    </body>
+    </html>
