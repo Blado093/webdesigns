@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <tittle>JSON Sandbox</tittle>
+  </head>
+  <body>
+    <ul id="people"></ul>
+    
+  <script>
+     // var person ={
+       // name:"John",
+        //age: 25,
+        //address:{
+          //street:"104 N Ave",
+          //city:"Texas"
+
+        //},
+        //children:["Kate", "Joe"]
+        
+      
+        
+     // }
+      
+     // person = JSON.stringify(person);
+      //person = JSON.parse(person);
+
+     var people = [
+        {
+          name:"John",
+          age:25
+
+        },
+        {
+          name:"Juan",
+          age:35
+        },
+        {
+          name:"Jenifer",
+          age:23
+        },
+        {
+          name:"King Julian",
+          age:45
+        }
+      ];
+        //COMMENTS of console.log()
+        //(person);= all info in line 12-19
+        //(person.address);= street and city line 15-16
+        //(person.children[#]);= pulls info of children line 19
+        //(People[#=info pulled in order])=info in data, people[1]name= (name:"name", age: "#")
+        //(people[#].name)= name
+        //(people[#].age
+      ///console.log(people[0].name);
+       
+        //code helps put out on to screen
+        /* var output = '';
+
+       //consol.log(people[#/i]);= #=ordered number with info/ i= all names with info
+       //consol.log(people[#=list order].name/.age)
+       for(var i=0;i < people.length;i++){
+        //this code lists info in consol
+        //console.log(people[i].name);
+      
+        output += '<li>'+people[i].name+'</li>';
+       
+      
+      }
+        //this code will help retireve and display data on webpage
+        document.getElementById('people').innerHTML= output;
+        */
+      
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+               var response = JSON.xhttp.onreadystatechange;
+                //console.log(response.people);
+               
+                var people = response.people;
+                var output = '';
+                for(var i=0;i < people.length;i++){
+                  output += '<li>'+people[i].name+'</li>';
+              }
+              document.getElementById('people').innerHTML = output;
+            
+            }
+          };
+          xhttp.open("GET", "json1.json", true);
+          XMLHttpRequest.send()
+    
+  
+       
+
+        
+
+  </script> 
+  </body>
+  </html>
