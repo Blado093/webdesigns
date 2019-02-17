@@ -1,0 +1,22 @@
+{
+"people":[
+    {
+        "name":"John",
+        "age":25
+
+      },
+      {
+        "name":"Juan",
+        "age":35
+      },
+      {
+        "name":"Jenifer",
+        "age":23
+      },
+      {
+        "name":"King Julian",
+        "age":28
+      }
+
+  ]
+}
